@@ -1,0 +1,63 @@
+
+<!-- <div class="container-fluid mx-10">
+  <div class="card rounded-top-5 rounded-bottom-5">
+    <div class="h3 bg-primary text-white text-center py-2 rounded-top-5">
+      Product Description
+    </div>
+    <div class="row">
+      <div class="col-9 text-dark">
+        <div class="bg-light pl-10">
+          <h4>
+            {{ product.name }}
+            <span class="badge rounded-pill bg-primary" style="float: right">
+              {{ product.price | currency : "USD" : "symbol" : "2.2-2" }}
+            </span>
+          </h4>
+          <div class="card-text bg-white p-1">
+            {{ product.description }}
+            <button
+              class="btn btn-success btn-sm float-end"
+              (click)="addProductToCart(product)"
+            >
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">col 3</div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container mt-5">
+  <div class="card">
+    <div
+      class="card-header text-white text-center"
+      style="background-color: crimson"
+    >
+      <h3>Product Details</h3>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <!-- Left Side (Col-9) -->
+        <div class="col-lg-9">
+          <h4>Product Name: {{ product.name }}</h4>
+          <p>Product Description: {{ product.description }}</p>
+          <h3 class="text-success font-weight-bold">
+            {{ product.price | currency : "USD" : "symbol" : "2.2-2" }}
+          </h3>
+          <button class="btn btn-primary" (click)="addProductToCart(product)">
+            Add to Cart
+          </button>
+          <button class="btn btn-primary m-1" routerLink="/store">
+            Continue Shopping
+          </button>
+        </div>
+        <!-- Right Side (Col-3) -->
+        <div class="col-lg-3">
+          <img src = "/assets/kayak.jpg" alt="Product Image" class="img-fluid" style="height: 150px; width: auto;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
